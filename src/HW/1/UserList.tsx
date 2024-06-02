@@ -18,14 +18,14 @@ export const UserList = (props: UserListPropsType) => {
   return (
     <div id={'hw01-users'}>
       <h2>User List:</h2>
-
       <ul>
-       {props.users.map((UserType,id) => (
+       {props.users.map((UserType,id) => {
+        return (
          <li key={UserType.id} id={`hw01-user-${UserType.id}`}>
            <strong>{UserType.name}</strong> (Age: {UserType.age})<strong> Address:</strong>
            {UserType.address.street}, {UserType.address.city}
-         </li>
-       ))}
+         </li>)
+})}
       </ul> 
     </div>
   );
