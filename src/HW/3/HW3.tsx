@@ -16,11 +16,14 @@ export const HW3 = () => {
     'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
   ]);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
     setCurrentText(event.currentTarget.value);
+
   };
 
-  const handleSave = () => {
+  const handleSave = (texts:string[]) => {
+    setTexts(texts)
+    setCurrentText(" ")
     // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
     // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
   };
