@@ -39,12 +39,13 @@ export const HW3 = () => {
 
       <button id={'hw03-button'} onClick={() => { handleSave }}>
         {/* НЕ ХВАТАТЕТ ФУНКЦИИ */}
+        SAVE
         {/*  Сохранить*/}
       </button>
 
-      {/*<h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>*/}
+      <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
-      {/*<ol id={'hw03-tasks'}>*/}
+      <ol id={'hw03-tasks'}>
       {/*  {ОТРИСОВАТЬ МАССИВ.map((el, index) => {*/}
       {/*    return (*/}
       {/*      <li key={index} id={`hw03-task-${index}`}>*/}
@@ -52,7 +53,7 @@ export const HW3 = () => {
       {/*      </li>*/}
       {/*    );*/}
       {/*  })}*/}
-      {/*</ol>*/}
+      </ol>
     </div>
   );
 };
