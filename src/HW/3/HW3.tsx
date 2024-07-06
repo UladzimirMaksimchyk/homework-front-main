@@ -22,8 +22,9 @@ export const HW3 = () => {
   };
 
   const handleSave = (texts: string[]) => {
-    setTexts(texts)
-    setCurrentText(" ")
+    currentText.trim()
+    ?setTexts(text=>[...text,currentText])
+    :setCurrentText(" ")
     // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
     // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
   };
