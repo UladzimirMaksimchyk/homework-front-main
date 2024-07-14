@@ -34,14 +34,15 @@ export const HW4 = () => {
 
       <Input currentText='111' setCurrentText={setCurrentText}/>
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
-      <Button  onclick={handleSave} />
+
+      <Button onClick={handleSave} />
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
       <ol id={'hw04-tasks'}>
-      { {texts.map((el, index) => {
+       {texts.map((el, index) => {
           return (
-          <li key={index} id={`hw04-task-${index}`} className={ЕСЛИ ЧЕТН ? S.chetNechet : ''}>
+          <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
               {el}
           </li>
          );
