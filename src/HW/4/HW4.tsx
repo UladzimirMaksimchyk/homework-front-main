@@ -35,7 +35,7 @@ export const HW4 = () => {
       <Input currentText='111' setCurrentText={setCurrentText}/>
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
 
-      <Button onClick={handleSave} />
+      <Button  name='' callBack={handleSave}/>
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
