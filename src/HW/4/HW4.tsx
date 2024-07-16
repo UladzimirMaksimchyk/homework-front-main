@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import s from './HW4.module.css';
-import { Button } from './Button';
+// import { Button } from './Button';
 import { Input } from './Input';
 
 export const HW4 = () => {
@@ -20,8 +20,10 @@ export const HW4 = () => {
   ]);
 
   const handleSave = () => {
-    setTexts([currentText, ...texts]);
-    setCurrentText('');
+    if (currentText.trim()) {
+      setTexts([currentText, ...texts]);
+      setCurrentText('');
+    }
   };
 
   return (
@@ -35,7 +37,7 @@ export const HW4 = () => {
       <Input currentText={currentText} setCurrentText={setCurrentText}/>
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
 
-      <Button  name='SAVE' callBack={handleSave}/>
+      <button onClick={handleSave}>SAVE</button>
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
