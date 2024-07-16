@@ -32,10 +32,10 @@ export const HW4 = () => {
         <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>
       )}
 
-      <Input currentText='111' setCurrentText={setCurrentText}/>
+      <Input currentText={currentText} setCurrentText={setCurrentText}/>
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
 
-      <Button  name='' callBack={handleSave}/>
+      <Button  name='SAVE' callBack={handleSave}/>
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
