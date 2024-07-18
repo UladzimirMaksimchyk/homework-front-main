@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import s from './HW4.module.css';
-// import { Button } from './Button';
 import { Input } from './Input';
+import { Button } from './Button';
 
 export const HW4 = () => {
   // 1️⃣ Раскомментируйте JSX (HW4.tsx) и вы увидите,
@@ -29,25 +29,25 @@ export const HW4 = () => {
   return (
     <div id={'hw04'}>
       {currentText ? (
-     <h1 id={'hw04-text'}>{currentText}</h1>
+        <h1 id={'hw04-text'}>{currentText}</h1>
       ) : (
         <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>
       )}
 
-      <Input currentText={currentText} setCurrentText={setCurrentText}/>
+      <Input currentText={currentText} setCurrentText={setCurrentText} />
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
-
-      <button onClick={handleSave}>SAVE</button>
+      <button onClick={handleSave}>S</button>
+      {/* <Button callBack={handleSave} name='SAVE' /> */}
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
       <ol id={'hw04-tasks'}>
-       {texts.map((el, index) => {
+        {texts.map((el, index) => {
           return (
-          <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
+            <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
               {el}
-          </li>
-         );
+            </li>
+          );
         })}
       </ol>
     </div>
