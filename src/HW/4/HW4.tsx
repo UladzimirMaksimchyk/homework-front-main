@@ -37,11 +37,11 @@ export const HW4 = () => {
       <Input currentText={currentText} setCurrentText={setCurrentText} />
       {/* НЕ ХВАТАЕТ АРГУМЕНТОВ */}
       {/* <button onClick={handleSave}>S</button> */}
-      <Button callBack={handleSave} name='SAVE' onClick=""/>
+      <Button  name='SAVE' callBack={handleSave} />
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
-      <ol id={'hw04-tasks'}>
+      <ul id={'hw04-tasks'}>
         {texts.map((el, index) => {
           return (
             <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
@@ -49,7 +49,7 @@ export const HW4 = () => {
             </li>
           );
         })}
-      </ol>
+      </ul>
     </div>
   );
 };
