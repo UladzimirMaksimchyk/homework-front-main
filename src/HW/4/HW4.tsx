@@ -16,7 +16,7 @@ export const HW4 = () => {
 
   const [currentText, setCurrentText] = useState('');
   const [texts, setTexts] = useState<string[]>([
-    'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
+    'То, что вы делаете по ночам, то и делает вас богатым.',
   ]);
 
   const handleSave = () => {
