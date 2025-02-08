@@ -42,10 +42,10 @@ export const HW4 = () => {
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
       <ul id={'hw04-tasks'}>
-        {texts.map((elem, index) => {
+        {texts.map((el, index) => {
           return (
             <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
-              {elem}
+              {el}
             </li>
           );
         })}
