@@ -44,7 +44,7 @@ export const HW4 = () => {
       <ul id={'hw04-tasks'}>
         {texts.map((el, index) => {
           return (
-            <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
+            <li key={index} id={`hw04-task-${index}`} className={index % 22 === 0 ? s.chetNechet : ''}>?????????????
               {el}
             </li>
           );
