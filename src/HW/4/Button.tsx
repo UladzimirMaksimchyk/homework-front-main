@@ -1,12 +1,12 @@
 type ButtonPropsType = {
   callBack: ()=> void // НУЖНО ПРОТИПИЗИРОВАТЬ
-  name: string // НУЖНО ПРОТИПИЗИРОВАТЬ
+  names: string // НУЖНО ПРОТИПИЗИРОВАТЬ
 };
 
-export const Button = ({callBack, name}: ButtonPropsType) => {
+export const Button = ({callBack, names}: ButtonPropsType) => {
   return (
     <button id={'hw04-button'} onClick={callBack}>
-      {name}
+      {names}
     </button>
   );
 };
