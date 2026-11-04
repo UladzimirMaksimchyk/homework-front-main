@@ -15,7 +15,7 @@ type UserListPropsType = {
   users: UserType[]; // ПО МОЕМУ ЧЕГО-ТО НЕ ХВАТАЕТ...
 };
 
-export const User = (props: UserListPropsType) => {
+export const UserList = (props: UserListPropsType) => {
   return (
     <div id={'hw01-users'}>
 
