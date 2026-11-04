@@ -28,6 +28,8 @@ export const UserList = (props: UserListPropsType) => {
           </li>
         ))}
       </ul>
+        <button>1</button>
+        <button>2</button>
     </div>
   );
 };
