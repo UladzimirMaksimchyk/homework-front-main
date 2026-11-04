@@ -34,11 +34,6 @@ export const HW1 = () => {
 	return (
 		<div id={'hw01'}>
 			<UserList users={users} />
-			<button>1</button>
-			<button>2</button>
-			<button>3</button>
-			<button>3</button>
-
 		</div>
 	);
 };
