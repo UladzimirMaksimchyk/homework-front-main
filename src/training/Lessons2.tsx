@@ -3,6 +3,7 @@ export const Lessons2 = () => {
         <>
             <input value={"Hello World"}/>
             <button onClick={()=>console.log("wow")}>1</button>
+
         </>
     );
 };
