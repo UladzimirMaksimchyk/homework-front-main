@@ -26,13 +26,13 @@ export const HW4 = () => {
 
   return (
     <div id={'hw04'}>
-      {/*{currentText ? (*/}
-      {/*  <h1 id={'hw04-text'}>{currentText}</h1>*/}
-      {/*) : (*/}
-      {/*  <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>*/}
-      {/*)}*/}
+      {currentText ? (
+        <h1 id={'hw04-text'}>{currentText}</h1>
+      ) : (
+        <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>
+      )}
 
-      {/*<Input НЕ ХВАТАЕТ АРГУМЕНТОВ />*/}
+      <Input currentText={currentText} setCurrentText={setCurrentText} />
 
       {/*<Button НЕ ХВАТАЕТ АРГУМЕНТОВ />*/}
 
