@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import s from './HW4.module.css';
+
 import { Button } from './Button';
 import { Input } from './Input';
 
@@ -34,10 +34,9 @@ export const HW4 = () => {
 
       <Input currentText={currentText} setCurrentText={setCurrentText} />
 
-      {/*<Button НЕ ХВАТАЕТ АРГУМЕНТОВ />*/}
+      <Button name={"+"} callBack={handleSave} />
 
       {/*<h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>*/}
-
       {/*<ol id={'hw04-tasks'}>*/}
       {/*  {texts.map((el, index) => {*/}
       {/*    return (*/}
@@ -50,4 +49,4 @@ export const HW4 = () => {
     </div>
   );
 };
-
+// import s from './HW4.module.css';
