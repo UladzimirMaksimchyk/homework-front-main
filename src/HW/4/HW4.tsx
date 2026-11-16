@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import s from './HW4.module.css';
 import { Button } from './Button';
 import { Input } from './Input';
 
@@ -36,17 +36,16 @@ export const HW4 = () => {
 
       <Button name={"+"} callBack={handleSave} />
 
-      {/*<h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>*/}
-      {/*<ol id={'hw04-tasks'}>*/}
-      {/*  {texts.map((el, index) => {*/}
-      {/*    return (*/}
-      {/*      <li key={index} id={`hw04-task-${index}`} className={ЕСЛИ ЧЕТН ? S.chetNechet : ''}>*/}
-      {/*        {el}*/}
-      {/*      </li>*/}
-      {/*    );*/}
-      {/*  })}*/}
-      {/*</ol>*/}
+      <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
+      <ol id={'hw04-tasks'}>
+        {texts.map((el, index) => {
+          return (
+            <li key={index} id={`hw04-task-${index}`} className={index % 2 === 0 ? s.chetNechet : ''}>
+              {el}
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 };
-// import s from './HW4.module.css';
