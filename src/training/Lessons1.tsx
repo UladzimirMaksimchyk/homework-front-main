@@ -1,24 +1,29 @@
 import {useState} from "react";
-import {v1} from "uuid";
+
 
 export const Lessons1 = () => {
 
     const [tasks, setTasks] = useState([
-        {id: v1(), title: 'HTML&CSS', isDone: true},
-        {id: v1(), title: 'JS', isDone: true},
-        {id: v1(), title: 'ReactJS', isDone: false},
+        {id: 1, title: 'HTML&CSS', isDone: true},
+        {id: 2, title: 'JS', isDone: true},
+        {id: 3, title: 'ReactJS', isDone: false},
     ])
 
 
     const [current, setCurrent] = useState(0);
 
+    const filteredTasksHandler=()=>{
+        const filteredTasks=tasks.filter(t=>t.isDone)
+        setTasks(filteredTasks);
+    }
 
     return (
         <div>
             <h1>{current}</h1>
-            <button onClick={() => setCurrent(current + 1)}>+</button>
+            <button onClick={() => setCurrent(prev=>prev + 1)}>+</button>
             <button onClick={() => setCurrent(0)}>0</button>
             <button onClick={() => setTasks([])}>tasks</button>
+            <button onClick={filteredTasksHandler}>filter</button>
 
             <ul>
                 {tasks.map(t => {
