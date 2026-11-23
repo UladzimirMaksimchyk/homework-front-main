@@ -20,14 +20,18 @@ export const Todolist2 = (props: PropsType) => {
 
     let [filter, setFilter] = useState<FilterValuesType>("all");
 
-    let tasksForTodolist = props.tasks;
+    const filteredTasks = () => {
+        let tasksForTodolist = props.tasks;
 
-    if (filter === "active") {
-        tasksForTodolist = props.tasks.filter(t => !t.isDone);
+        if (filter === "active") {
+            tasksForTodolist = props.tasks.filter(t => !t.isDone);
+        }
+        if (filter === "completed") {
+            tasksForTodolist = props.tasks.filter(t => t.isDone);
+        }
+        return tasksForTodolist;
     }
-    if (filter === "completed") {
-        tasksForTodolist = props.tasks.filter(t => t.isDone);
-    }
+
 
     function changeFilter(value: FilterValuesType) {
         setFilter(value);
@@ -42,7 +46,7 @@ export const Todolist2 = (props: PropsType) => {
         </div>
         <ul>
             {
-                tasksForTodolist.map(t =>
+                filteredTasks().map(t =>
                     <li key={t.id}>
                         <input type="checkbox" checked={t.isDone}/>
                         <span>{t.title}</span>
@@ -54,7 +58,10 @@ export const Todolist2 = (props: PropsType) => {
             }
         </ul>
         <div>
-            <button onClick={() => {changeFilter("all")}}>All</button>
+            <button onClick={() => {
+                changeFilter("all")
+            }}>All
+            </button>
             <button onClick={() => {
                 changeFilter("active")
             }}>
