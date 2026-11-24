@@ -19,7 +19,7 @@ type PropsType = {
 export const Todolist2 = (props: PropsType) => {
 
     let [filter, setFilter] = useState<FilterValuesType>("all");
-
+    // let [error, setError] = useState<Error>();
     const filteredTasks = () => {
         let tasksForTodolist = props.tasks;
 
