@@ -12,7 +12,7 @@ export const App2 = () => {
     ]);
 
     function removeTask(id: number) {
-        setTasks(tasks.filter(t => t.id != id))
+        setTasks(tasks.filter(t => t.id == id))
     }
 
     const deleteTasks = () => {
